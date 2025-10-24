@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: <tu-usuario>/mi-grupo       # <--- cambia esto
+  branch: main
+  # Estos endpoints los completaremos en el paso 5 (OAuth proxy)
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+publish_mode: editorial_workflow     # (opcional) crea PRs para revisar antes de publicar
+
+# Por ahora una colección de prueba:
+collections:
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - file: "content/_index.md"
+        label: "Inicio"
+        name: "home"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
